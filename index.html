@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Ordering Page</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Foodie</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#menu">Menu</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#cart">Cart</a></li>
+              <li><a class="dropdown-item" href="#contact">Contact</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Slideshow -->
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://via.placeholder.com/1200x400/2c3e50/ffffff?text=Welcome+to+Foodie" class="d-block w-100" alt="Slide 1">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Welcome to Foodie</h1>
+          <p>Order your favorite meals with just a few clicks!</p>
+          <a href="#menu" class="btn btn-light btn-lg">View Menu</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/1200x400/e74c3c/ffffff?text=Delicious+Meals+Delivered+Fast" class="d-block w-100" alt="Slide 2">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Delicious Meals Delivered Fast</h1>
+          <p>Your favorite food, hot and fresh, right at your doorstep!</p>
+          <a href="#menu" class="btn btn-light btn-lg">Order Now</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/1200x400/2980b9/ffffff?text=Easy+Online+Ordering" class="d-block w-100" alt="Slide 3">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Easy Online Ordering</h1>
+          <p>Quick and simple process, just a few clicks away!</p>
+          <a href="#menu" class="btn btn-light btn-lg">Get Started</a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Menu Section -->
+  <section id="menu" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Menu</h2>
+      <div class="row">
+        <!-- Food Item 1 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://th.bing.com/th/id/OIG1.ln18OIGMSR.9MxkLfsYv?w=270&h=270&c=6&r=0&o=5&dpr=1.5&pid=ImgGn" class="card-img-top" alt="Biryani">
+            <div class="card-body">
+              <h5 class="card-title">Biryani</h5>
+              <p class="card-text">Delicious Biryani with fresh ingredients.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#orderModal" data-item="Biryani" data-price="12.99">Order Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- Food Item 2 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://th.bing.com/th/id/OIG3.jUm6kd_GE8tBeNEcMTIa?w=270&h=270&c=6&r=0&o=5&dpr=1.5&pid=ImgGn" class="card-img-top" alt="Fish">
+            <div class="card-body">
+              <h5 class="card-title">Fish</h5>
+              <p class="card-text">Fresh Fish that creates cravings for all.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#orderModal" data-item="Fish" data-price="8.99">Order Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- Food Item 3 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://th.bing.com/th/id/OIG2.ZytGlhs2PrHQaTdP2ayO?w=270&h=270&c=6&r=0&o=5&dpr=1.5&pid=ImgGn" class="card-img-top" alt="Crispy Chicken">
+            <div class="card-body">
+              <h5 class="card-title">Crispy Chicken</h5>
+              <p class="card-text">You'll feel like your hunger will never end.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#orderModal" data-item="Crispy Chicken" data-price="10.99">Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Section -->
+  <section id="cart" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Your Cart</h2>
+      <div class="row">
+        <div class="col-md-8">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="cartItems">
+              <tr>
+                <td colspan="4" class="text-center">Your cart is empty</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-4">
+          <h4>Cart Summary</h4>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Subtotal
+              <span id="cartSubtotal">$0.00</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Tax (5%)
+              <span id="cartTax">$0.00</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Total
+              <span id="cartTotal">$0.00</span>
+            </li>
+          </ul>
+          <button class="btn btn-success w-100 mt-4" id="checkoutButton" disabled>Proceed to Checkout</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <form id="contactForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <p>&copy; 2023 Foodie. All rights reserved.</p>
+    <p>Contact us: foodie@gmail.com | +91 1234567890</p>
+  </footer>
+
+  <!-- Order Modal -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="orderModalLabel">Order Item</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="orderForm">
+            <div class="mb-3">
+              <label for="orderItem" class="form-label">Item</label>
+              <input type="text" class="form-control" id="orderItem" readonly>
+            </div>
+            <div class="mb-3">
+              <label for="orderPrice" class="form-label">Price</label>
+              <input type="text" class="form-control" id="orderPrice" readonly>
+            </div>
+            <div class="mb-3">
+              <label for="orderQuantity" class="form-label">Quantity</label>
+              <input type="number" class="form-control" id="orderQuantity" min="1" value="1">
+            </div>
+            <div class="mb-3">
+              <label for="orderTotal" class="form-label">Total</label>
+              <input type="text" class="form-control" id="orderTotal" readonly>
+            </div>
+            <button type="submit" class="btn btn-primary">Add to Cart</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const orderModal = document.getElementById('orderModal');
+      let cart = [];
+
+      // Modal setup
+      orderModal.addEventListener('show.bs.modal', function(event) {
+        const button = event.relatedTarget;
+        const item = button.getAttribute('data-item');
+        const price = parseFloat(button.getAttribute('data-price'));
+
+        const modalItem = orderModal.querySelector('#orderItem');
+        const modalPrice = orderModal.querySelector('#orderPrice');
+        const modalTotal = orderModal.querySelector('#orderTotal');
+        const modalQuantity = orderModal.querySelector('#orderQuantity');
+
+        modalItem.value = item;
+        modalPrice.value = `$${price.toFixed(2)}`;
+        modalTotal.value = `$${price.toFixed(2)}`;
+
+        modalQuantity.addEventListener('input', function() {
+          const quantity = modalQuantity.value;
+          modalTotal.value = `$${(price * quantity).toFixed(2)}`;
+        });
+      });
+
+      // Handle adding to cart
+      const orderForm = document.getElementById('orderForm');
+      orderForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const item = document.getElementById('orderItem').value;
+        const quantity = parseInt(document.getElementById('orderQuantity').value, 10);
+        const price = parseFloat(document.getElementById('orderPrice').value.replace('$', ''));
+        const total = price * quantity;
+
+        cart.push({ item, quantity, price, total });
+        updateCart();
+
+        // Close the modal
+        const modal = bootstrap.Modal.getInstance(orderModal);
+        modal.hide();
+      });
+
+      function updateCart() {
+        const cartItems = document.getElementById('cartItems');
+        const cartSubtotal = document.getElementById('cartSubtotal');
+        const cartTax = document.getElementById('cartTax');
+        const cartTotal = document.getElementById('cartTotal');
+        const checkoutButton = document.getElementById('checkoutButton');
+
+        cartItems.innerHTML = '';
+
+        let subtotal = 0;
+        cart.forEach(item => {
+          subtotal += item.total;
+          cartItems.innerHTML += `
+            <tr>
+              <td>${item.item}</td>
+              <td>${item.quantity}</td>
+              <td>$${item.price.toFixed(2)}</td>
+              <td>$${item.total.toFixed(2)}</td>
+            </tr>
+          `;
+        });
+
+        const tax = subtotal * 0.05;
+        const total = subtotal + tax;
+
+        cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
+        cartTax.textContent = `$${tax.toFixed(2)}`;
+        cartTotal.textContent = `$${total.toFixed(2)}`;
+
+        checkoutButton.disabled = cart.length === 0;
+      }
+
+      // Contact form submission
+      const contactForm = document.getElementById('contactForm');
+      contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Show alert in the middle of the page
+        alert(`Thank you for reaching out, ${name}!\n\nWe will respond to your message soon.\n\nDetails:\nEmail: ${email}\nMessage: ${message}`);
+      });
+    });
+  </script>
+</body>
+</html>
